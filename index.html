@@ -6,10 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Game Find A Number</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <section class="headGame">
+    <p>Hi, Welcome to my game</p>
+    <button class="play">Play</button>
+    <button class="howPlay">How to play</button>
+  </section>
 
+  <section class="bodyGame">
+    <div class="message">Step 1: Write the number of squares</div>
+    <input type="number" id="userNumberSquare">
+    <button id="add">Add</button>
+    <p>You add: <span id="squares"></span> squares.</p>
+    <button class="randomNumber">Random number of squares</button>
+    <div class="menuSquares"></div>
+  </section>
+
+  <section class="howPlayModal"></section>
+  <script src="script.js"></script>
 </body>
 
 </html>
