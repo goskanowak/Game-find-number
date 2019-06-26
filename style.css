@@ -58,6 +58,12 @@
   text-transform: uppercase;
 }
 
+.textModal {
+  margin-top: 5vh;
+  font-size: 1.2rem;
+  line-height: 150%;
+}
+
 .titleModal {
   font-size: 2em;
 }
@@ -99,6 +105,10 @@
 .stepTwo {
   display: none;
 } */
+
+.active {
+  display: block;
+}
 
 .randomNumber {
   line-height: 200%;

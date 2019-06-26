@@ -1,3 +1,30 @@
+let play = document.getElementById('play');
+let howPlay = document.getElementById('howPlay');
+let howPlayModal = document.getElementById('howPlayModal');
+let closeModal = document.getElementById('closeModal')
+
+
+howPlay.addEventListener('click', howPlayGame);
+play.addEventListener('click', playGame);
+closeModal.addEventListener('click', closeModalGame);
+
+function closeModalGame() {
+  howPlayModal.classList.remove('active');
+
+}
+
+function playGame() {
+  // console.log('great')
+}
+
+function howPlayGame() {
+  console.log(howPlayModal.classList)
+  howPlayModal.classList.add('active')
+  // console.log('ok')
+
+}
+
+
 //======================= TO DO =============================
 //1. stworzenie inputa
 //2. pobranie wartości z inputa
