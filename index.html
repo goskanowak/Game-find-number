@@ -17,11 +17,16 @@
   </section>
 
   <section class="bodyGame">
-    <div class="message">Step 1: Write the number of squares</div>
-    <input type="number" id="userNumberSquare">
-    <button id="add">Add</button>
-    <p>You add: <span id="squares">0</span> squares.</p>
-    <button class="randomNumber">Random number of squares</button>
+    <div class="message">Step 1: Write and add the number of squares</div>
+    <div class="stepOne">
+      <input type="number" class="userNumber active" id="userNumberSquare">
+      <button id="add" class="add">Add</button>
+    </div>
+
+    <p class="userAdd">You add: <span class="squares">0</span> squares.</p>
+    <div class="stepTwo">
+      <button class="randomNumber">Random number of squares</button>
+    </div>
     <div class="menuSquares"></div>
   </section>
 

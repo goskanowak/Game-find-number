@@ -3,23 +3,29 @@
   font-family: monospace;
   text-align: center;
   font-size: 12px;
-}
-
-.bodyGame {
-  /* display: none; */
+  margin: 0;
+  padding: 0;
 }
 
 .headGame {
-  padding: 10vw;
+  padding: 1.5vh;
 }
 
 .welcome {
-  font-size: 1.2em;
+  font-size: 1.5em;
+  margin: 2vh;
 }
 
+.play,
+.howPlay {
+  display: inline-block;
+  width: 40%;
+  line-height: 200%;
+  font-size: 1.2rem;
+}
 
 .howPlayModal {
-  /* display: none; */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -32,7 +38,7 @@
   position: absolute;
   width: 70%;
   height: 90%;
-  background-color: #856;
+  background-color: rgb(218, 126, 156);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -59,4 +65,44 @@
 .headGame.blur,
 .bodyGame.blur {
   filter: blur(1px);
+}
+
+.bodyGame {
+  display: none;
+}
+
+.message {
+  background-color: rgb(167, 202, 191);
+  margin: 2% 0;
+  padding: 1%;
+  font-size: 1.5rem;
+}
+
+.userNumber,
+.add {
+  /* display: none; */
+  width: 30%;
+  line-height: 200%;
+  font-size: 1.3em;
+  margin: 1.5vh 0;
+}
+
+.userAdd,
+.squares {
+  font-size: 1.5rem;
+}
+
+/* .stepOne {
+  display: none;
+}
+
+.stepTwo {
+  display: none;
+} */
+
+.randomNumber {
+  line-height: 200%;
+  font-size: 1.3em;
+  margin: 1.5vh 0;
+  width: 75%;
 }
