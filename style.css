@@ -37,7 +37,7 @@
 .modalBox {
   position: absolute;
   width: 70%;
-  height: 90%;
+  height: 70%;
   background-color: rgb(218, 126, 156);
   top: 50%;
   left: 50%;
@@ -79,10 +79,10 @@
   filter: blur(1px);
 }
 
-/* 
+
 .bodyGame {
-  display: none;
-} */
+  width: 100%;
+}
 
 .message,
 .messageRandom {
@@ -90,6 +90,7 @@
   margin: 2% 0;
   padding: 1%;
   font-size: 1.5rem;
+  width: 100vw;
 }
 
 .userNumber,
@@ -107,11 +108,12 @@
 }
 
 .stepOne {
-  opacity: 0;
+  display: none;
+  width: 100%;
 }
 
 .stepTwo {
-  opacity: 0;
+  display: none;
 }
 
 .menuSquares {
@@ -130,7 +132,7 @@
 }
 
 .active {
-  display: block;
+  display: inline-block;
 }
 
 .visible {

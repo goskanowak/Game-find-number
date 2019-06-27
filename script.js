@@ -19,7 +19,7 @@ function closeModalGame() {
 }
 
 function playGame() {
-  stepOne.classList.add('visible');
+  stepOne.classList.add('active');
   addBoxs();
 }
 
@@ -36,8 +36,8 @@ function addBoxs() {
       box.textContent = (i + 1);
       menuSquares.appendChild(box);
       message.innerHTML = '';
-      stepOne.classList.remove('visible');
-      stepTwo.setAttribute('class', 'visible');
+      stepOne.classList.remove('active');
+      stepTwo.classList.add('active');
       const removeButton = play.removeEventListener('click', addBoxs);
     }
   };
