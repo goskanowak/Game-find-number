@@ -58,6 +58,12 @@
   text-transform: uppercase;
 }
 
+.closeModal:hover {
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
 .textModal {
   margin-top: 5vh;
   font-size: 1.2rem;
@@ -73,11 +79,13 @@
   filter: blur(1px);
 }
 
+/* 
 .bodyGame {
   display: none;
-}
+} */
 
-.message {
+.message,
+.messageRandom {
   background-color: rgb(167, 202, 191);
   margin: 2% 0;
   padding: 1%;
@@ -98,16 +106,35 @@
   font-size: 1.5rem;
 }
 
-/* .stepOne {
-  display: none;
+.stepOne {
+  opacity: 0;
 }
 
 .stepTwo {
-  display: none;
-} */
+  opacity: 0;
+}
+
+.menuSquares {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.number {
+  margin: 1px;
+  border: 1px solid black;
+  height: 60px;
+  width: 60px;
+  font-size: 18px;
+  line-height: 60px;
+  text-align: center;
+}
 
 .active {
   display: block;
+}
+
+.visible {
+  opacity: 1;
 }
 
 .randomNumber {
