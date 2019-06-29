@@ -1,7 +1,9 @@
 const play = document.getElementById('play');
-const howPlay = document.getElementById('howPlay');
+// const howPlay = document.getElementById('howPlay');
 const howPlayModal = document.getElementById('howPlayModal');
-const closeModal = document.getElementById('closeModal');
+const closeModalHowPlay = document.getElementById('closeModalHowPlay');
+const hint = document.getElementById('hint');
+const closeModalHint = document.getElementById('closeModalHint')
 const message = document.querySelector('.message');
 const stepOne = document.querySelector('.stepOne');
 const stepTwo = document.querySelector('.stepTwo');
@@ -11,11 +13,21 @@ const menuSquares = document.querySelector(".menuSquares");
 
 howPlay.addEventListener('click', howPlayGame);
 play.addEventListener('click', playGame);
-closeModal.addEventListener('click', closeModalGame);
-add.addEventListener('click', addBoxs)
+closeModalHowPlay.addEventListener('click', closeModalGamePlay);
+hint.addEventListener('click', hintGame);
+closeModalHint.addEventListener('click', closeModalGameHint);
+add.addEventListener('click', addBoxs);
 
-function closeModalGame() {
+function closeModalGamePlay() {
   howPlayModal.classList.remove('active');
+}
+
+function hintGame() {
+  hintModal.classList.add('active');
+}
+
+function closeModalGameHint() {
+  hintModal.classList.remove('active');
 }
 
 function playGame() {
@@ -57,7 +69,7 @@ function howPlayGame() {
 //9. podajemy komunikat ze liczba user jest <> od liczby wylosowanej
 //10. kolorujemy te które są <> od liczby;
 //11. kiedy user trafi liczbę pokazać komunikat że to jest właściwa liczba
-//12. podpowiedz, że w max 7 ruchach można trafić liczbę;
+
 //13. licznik kliknięć
 
 //15. potwierdzenie add poprzez enter
@@ -73,7 +85,7 @@ function howPlayGame() {
 
 
 
-
+//12. podpowiedz
 
 //14. wartość usera nie może być ujemna i mniejsza od 0 i większa od 500;
 //16. instrukcja/ How to play

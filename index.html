@@ -23,6 +23,7 @@
       <button id="add" class="add">Add</button>
     </div>
     <div class="stepTwo">
+      <div class="hint" id="hint">hint</div>
       <p class="userAdd">You add: <span class="squares">0</span> squares.</p>
       <div class="messageRandom">Step 2: Random the number</div>
       <button class="randomNumber">Random number of squares</button>
@@ -30,15 +31,35 @@
     <div class="menuSquares"></div>
   </section>
 
-  <section class="howPlayModal" id="howPlayModal">
+  <section class="modal" id="howPlayModal">
     <div class="modalBox">
-      <p class="closeModal" id="closeModal">x</p>
+      <p class="closeModal" id="closeModalHowPlay">x</p>
       <p class="titleModal">How to play</p>
       <p class="textModal">
         The computer will draw an integer from the pool of numbers you enter in the text field. Your task is to guess
         the number. You try for as long as you guess, and the computer always tells you whether your number is bigger or
         smaller than what you are looking for.
         Good luck :)
+      </p>
+    </div>
+  </section>
+
+  <section class="modal" id="hintModal">
+    <div class="modalBox">
+      <p class="closeModal" id="closeModalHint">x</p>
+      <p class="titleModal">Hint</p>
+      <p class="textModal">
+        Is it possible to act smarter than guessing in turn 1, 2, 3, 4, ...? Let's take a case of 16 numbers. If the
+        computer gives you information if
+        the number proposed by you is bigger, smaller or equal to the one chosen by the computer, you can start with 8.
+        If the number chosen by the computer is less than 8, you can eliminate all numbers from 8 to 16 in advance. If
+        the number chosen the computer is larger than 8, you can eliminate all numbers from 1 to 8. In both cases, you
+        can eliminate half the possibilities. In the next step you will eliminate half of the remaining numbers. And so
+        on, eliminating half the remaining numbers each time. This division in half is called <span>binary search</span>
+        and
+        regardless of the number from 1 to 16 you choose the computer with this method, you should guess the correct
+        answer in no more than 4 attempts.
+
       </p>
     </div>
   </section>
