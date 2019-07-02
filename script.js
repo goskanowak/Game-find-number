@@ -10,6 +10,9 @@ const stepTwo = document.querySelector('.stepTwo');
 let userNumberSquare;
 const add = document.getElementById('add');
 const menuSquares = document.querySelector(".menuSquares");
+let randomNumber;
+const randomValue = document.querySelector('.random');
+const messageRandom = document.querySelector('.messageRandom');
 
 howPlay.addEventListener('click', howPlayGame);
 play.addEventListener('click', playGame);
@@ -17,6 +20,7 @@ closeModalHowPlay.addEventListener('click', closeModalGamePlay);
 hint.addEventListener('click', hintGame);
 closeModalHint.addEventListener('click', closeModalGameHint);
 add.addEventListener('click', addBoxs);
+randomValue.addEventListener('click', random);
 
 function closeModalGamePlay() {
   howPlayModal.classList.remove('active');
@@ -53,6 +57,13 @@ function addBoxs() {
       const removeButton = play.removeEventListener('click', addBoxs);
     }
   };
+}
+
+function random() {
+  randomNumber = Math.floor((Math.random() * userNumberSquare) + 1);
+  console.log(randomNumber);
+  messageRandom.innerHTML = "Step 3: Find the number";
+  randomValue.classList.add('noActive');
 }
 
 function howPlayGame() {

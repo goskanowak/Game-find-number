@@ -152,11 +152,15 @@
   display: inline-block;
 }
 
+.noActive {
+  display: none;
+}
+
 .visible {
   opacity: 1;
 }
 
-.randomNumber {
+.random {
   line-height: 200%;
   font-size: 1.3em;
   margin: 1.5vh 0;
