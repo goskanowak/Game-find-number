@@ -97,6 +97,19 @@
   margin: 1%;
 }
 
+.countClick {
+  position: fixed;
+  height: 40px;
+  width: 40px;
+  top: 0;
+  right: 0;
+  background-color: rgb(216, 199, 182);
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  margin: 1%;
+}
+
 .bodyGame {
   width: 100%;
 }

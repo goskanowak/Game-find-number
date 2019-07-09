@@ -13,6 +13,8 @@ const menuSquares = document.querySelector(".menuSquares");
 let randomNumber;
 const randomValue = document.querySelector('.random');
 const messageRandom = document.querySelector('.messageRandom');
+const countClick = document.querySelector('.countClick');
+let counter = 0;
 
 howPlay.addEventListener('click', howPlayGame);
 play.addEventListener('click', playGame);
@@ -93,11 +95,13 @@ function checkNumber(e) {
       menuSquares.children[i - 1].classList.add('red');
     };
   }
+  counter++;
+  countClick.textContent = counter;
 }
 
 //===================== TO DO =============================
 
-//13. licznik kliknięć
+
 
 //15. potwierdzenie add poprzez enter
 
@@ -114,5 +118,6 @@ function checkNumber(e) {
 //10. kolorujemy te które są <> od liczby;
 //11. kiedy user trafi liczbę pokazać komunikat że to jest właściwa liczba
 //12. podpowiedz
+//13. licznik kliknięć
 //14. wartość usera nie może być ujemna i mniejsza od 0 i większa od 500;
 //16. instrukcja/ How to play
