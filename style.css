@@ -141,7 +141,7 @@
 
 .number {
   margin: 1px;
-  border: 1px solid black;
+  border: 1px solid rgb(214, 212, 212);
   height: 60px;
   width: 60px;
   font-size: 18px;
@@ -166,4 +166,12 @@
   font-size: 1.3em;
   margin: 1.5vh 0;
   width: 75%;
+}
+
+.red {
+  background-color: #ff4646;
+}
+
+.green {
+  background-color: rgb(102, 201, 93);
 }

@@ -75,30 +75,31 @@ function howPlayGame() {
 }
 
 function checkNumber(e) {
-  let checkNumberUser = e.target;
-  checkNumberUser = checkNumberUser.innerHTML;
+  let checkNumberBox = e.target;
+  let checkNumberUser = checkNumberBox.innerHTML;
   // console.log(typeof checkNumberUser);
   checkNumberUser = parseInt(checkNumberUser);
   if (checkNumberUser === randomNumber) {
-    console.log('ok!');
     messageRandom.textContent = 'Congratulations, you win!';
+    checkNumberBox.classList.add('green');
   } else if (checkNumberUser <= randomNumber) {
     messageRandom.textContent = 'Your number is smaller than random number';
+    for (i = 0; i < checkNumberUser; i++) {
+      menuSquares.children[i].classList.add('red');
+    };
   } else if (checkNumberUser >= randomNumber) {
     messageRandom.textContent = 'Your number is bigger than random number';
+    for (i = checkNumberUser; i <= userNumberSquare; i++) {
+      menuSquares.children[i - 1].classList.add('red');
+    };
   }
 }
 
-//======================= TO DO =============================
-
-//4. dodanie class i coloru do zaznaczenia
-
-//10. kolorujemy te które są <> od liczby;
+//===================== TO DO =============================
 
 //13. licznik kliknięć
 
 //15. potwierdzenie add poprzez enter
-
 
 // ====================== DONE ========================
 //1. stworzenie inputa
@@ -110,9 +111,8 @@ function checkNumber(e) {
 //7. user klika w kwadrat i sprawdzamy czy wybrana liczba to liczba wylosowana
 //8. sprawdzamy czy liczba wylowowana jest <> od liczby usera
 //9. podajemy komunikat ze liczba user jest <> od liczby wylosowanej
-
-
-//12. podpowiedz
+//10. kolorujemy te które są <> od liczby;
 //11. kiedy user trafi liczbę pokazać komunikat że to jest właściwa liczba
+//12. podpowiedz
 //14. wartość usera nie może być ujemna i mniejsza od 0 i większa od 500;
 //16. instrukcja/ How to play
