@@ -57,7 +57,7 @@ function addBoxs() {
       message.innerHTML = '';
       stepOne.classList.remove('active');
       stepTwo.classList.add('active');
-      const removeButton = play.removeEventListener('click', addBoxs);
+      const removeButton = play.removeEventListener('click', addBoxs, false);
       menuSquares.classList.add('noActive');
     }
   };
@@ -72,18 +72,17 @@ function random() {
 }
 
 function howPlayGame() {
-  // console.log(howPlayModal.classList)
   howPlayModal.classList.add('active');
 }
 
 function checkNumber(e) {
   let checkNumberBox = e.target;
   let checkNumberUser = checkNumberBox.innerHTML;
-  // console.log(typeof checkNumberUser);
   checkNumberUser = parseInt(checkNumberUser);
   if (checkNumberUser === randomNumber) {
     messageRandom.textContent = 'Congratulations, you win!';
     checkNumberBox.classList.add('green');
+    menuSquares.removeEventListener('click', checkNumber);
   } else if (checkNumberUser <= randomNumber) {
     messageRandom.textContent = 'Your number is smaller than random number';
     for (i = 0; i < checkNumberUser; i++) {
@@ -121,3 +120,4 @@ function checkNumber(e) {
 //13. licznik kliknięć
 //14. wartość usera nie może być ujemna i mniejsza od 0 i większa od 500;
 //16. instrukcja/ How to play
+// 17. po wskazaniu poprawnej liczby, zatrzymanie licznika i usunięcie nasłuchowania na checkNumber
