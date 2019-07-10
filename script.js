@@ -3,7 +3,7 @@ const play = document.getElementById('play');
 const howPlayModal = document.getElementById('howPlayModal');
 const closeModalHowPlay = document.getElementById('closeModalHowPlay');
 const hint = document.getElementById('hint');
-const closeModalHint = document.getElementById('closeModalHint')
+const closeModalHint = document.getElementById('closeModalHint');
 const message = document.querySelector('.message');
 const stepOne = document.querySelector('.stepOne');
 const stepTwo = document.querySelector('.stepTwo');
@@ -15,6 +15,8 @@ const randomValue = document.querySelector('.random');
 const messageRandom = document.querySelector('.messageRandom');
 const countClick = document.querySelector('.countClick');
 let counter = 0;
+const playAgain = document.querySelector('.playAgain');
+userAdd = document.querySelector('.userAdd');
 
 howPlay.addEventListener('click', howPlayGame);
 play.addEventListener('click', playGame);
@@ -24,6 +26,7 @@ closeModalHint.addEventListener('click', closeModalGameHint);
 add.addEventListener('click', addBoxs);
 randomValue.addEventListener('click', random);
 menuSquares.addEventListener('click', checkNumber);
+playAgain.addEventListener('click', again);
 
 function closeModalGamePlay() {
   howPlayModal.classList.remove('active');
@@ -40,6 +43,10 @@ function closeModalGameHint() {
 function playGame() {
   stepOne.classList.add('active');
   addBoxs();
+}
+
+function again() {
+  window.location.reload(true);
 }
 
 function addBoxs() {
@@ -83,6 +90,7 @@ function checkNumber(e) {
     messageRandom.textContent = 'Congratulations, you win!';
     checkNumberBox.classList.add('green');
     menuSquares.removeEventListener('click', checkNumber);
+    playAgain.classList.add('active');
   } else if (checkNumberUser <= randomNumber) {
     messageRandom.textContent = 'Your number is smaller than random number';
     for (i = 0; i < checkNumberUser; i++) {
@@ -95,7 +103,7 @@ function checkNumber(e) {
     };
   }
   counter++;
-  countClick.textContent = counter;
+  userAdd.textContent = 'You click: ' + counter;
 }
 
 //===================== TO DO =============================
