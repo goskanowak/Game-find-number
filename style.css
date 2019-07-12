@@ -29,6 +29,7 @@
 }
 
 .modal {
+  z-index: 2;
   display: none;
   position: fixed;
   top: 0;
@@ -164,6 +165,20 @@
   width: 100vw;
 }
 
+.fa-trophy {
+  position: fixed;
+  z-index: 1;
+  top: 25%;
+  left: 5%;
+  transform: rotate(-20deg);
+  transition: 1s;
+  transition-delay: .5s;
+  font-size: 2.5rem;
+  margin: 0 2vw;
+  opacity: 0;
+  color: rgb(255, 255, 0);
+}
+
 .userNumber,
 .add {
   /* display: none; */
@@ -214,6 +229,10 @@
 .anim {
   transform: rotate(360deg);
   transition: 1s;
+}
+
+.animBig {
+  transform: scale(1.5) rotate(-1830deg);
 }
 
 .noActive {

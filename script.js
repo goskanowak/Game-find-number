@@ -101,6 +101,7 @@ function checkNumber(e) {
     checkNumberBox.classList.add('green');
     menuSquares.removeEventListener('click', checkNumber);
     playAgain.classList.add('active');
+    document.querySelector('.fas').classList.add('animBig', 'visible');
   } else if (checkNumberUser <= randomNumber) {
     messageRandom.textContent = 'Your number is smaller than random number';
     for (i = 0; i < checkNumberUser; i++) {
