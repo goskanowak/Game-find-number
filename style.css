@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+*>button {
+  border: none;
+}
+
 .headGame {
   padding: 1.5vh;
 }
@@ -64,8 +68,8 @@
 }
 
 .textModal {
-  margin-top: 5vh;
-  font-size: 1.2rem;
+  /* margin-top: 2vh; */
+  font-size: 1.1rem;
   line-height: 150%;
 }
 
@@ -94,6 +98,43 @@
   line-height: 40px;
   text-align: center;
   margin: 1%;
+}
+
+.wantMore>p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 2vw 0;
+}
+
+.read,
+.watch {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  margin: 1vh 0;
+  font-size: 1.3rem;
+}
+
+.read {
+  transition: .5s;
+}
+
+.watch {
+  transition: 1.5s;
+}
+
+.wantMore a {
+  text-decoration: none;
+  color: black;
+  margin: 0 2vh;
+  /* font-size: 1.3rem; */
+}
+
+.wantMore i {
+  height: 10px;
+  width: 10px;
+  color: black;
+  margin: 0 2vh;
 }
 
 /* .countClick {
@@ -168,6 +209,11 @@
 
 .active {
   display: inline-block;
+}
+
+.anim {
+  transform: rotate(360deg);
+  transition: 1s;
 }
 
 .noActive {

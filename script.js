@@ -17,6 +17,7 @@ const countClick = document.querySelector('.countClick');
 let counter = 0;
 const playAgain = document.querySelector('.playAgain');
 userAdd = document.querySelector('.userAdd');
+const moreTitle = document.querySelector('.moreTitle');
 
 howPlay.addEventListener('click', howPlayGame);
 play.addEventListener('click', playGame);
@@ -27,6 +28,7 @@ add.addEventListener('click', addBoxs);
 randomValue.addEventListener('click', random);
 menuSquares.addEventListener('click', checkNumber);
 playAgain.addEventListener('click', again);
+moreTitle.addEventListener('click', wantMore);
 
 function closeModalGamePlay() {
   howPlayModal.classList.remove('active');
@@ -49,6 +51,13 @@ function again() {
   window.location.reload(true);
 }
 
+function wantMore() {
+  document.querySelector(
+    '.read').classList.toggle('visible');
+  document.querySelector(
+    '.watch').classList.toggle('visible');
+}
+
 function addBoxs() {
   userNumberSquare = document.getElementById('userNumberSquare').value;
   document.querySelector('.squares').textContent = userNumberSquare;
@@ -64,6 +73,7 @@ function addBoxs() {
       message.innerHTML = '';
       stepOne.classList.remove('active');
       stepTwo.classList.add('active');
+      hint.classList.add('anim');
       const removeButton = play.removeEventListener('click', addBoxs, false);
       menuSquares.classList.add('noActive');
     }
@@ -108,8 +118,6 @@ function checkNumber(e) {
 
 //===================== TO DO =============================
 
-
-
 //15. potwierdzenie add poprzez enter
 
 // ====================== DONE ========================
@@ -117,15 +125,17 @@ function checkNumber(e) {
 //2. pobranie wartości z inputa
 //3. przekazanie i stworzenie tyle kwadratów ile wskazał user
 
-//5. stworzenie buttona do losowania liczby
-//6. wylosowanie liczby z przedziału od 0 do wartości wskazanej przez usera;
-//7. user klika w kwadrat i sprawdzamy czy wybrana liczba to liczba wylosowana
-//8. sprawdzamy czy liczba wylowowana jest <> od liczby usera
-//9. podajemy komunikat ze liczba user jest <> od liczby wylosowanej
-//10. kolorujemy te które są <> od liczby;
-//11. kiedy user trafi liczbę pokazać komunikat że to jest właściwa liczba
-//12. podpowiedz
-//13. licznik kliknięć
-//14. wartość usera nie może być ujemna i mniejsza od 0 i większa od 500;
-//16. instrukcja/ How to play
+// 5. stworzenie buttona do losowania liczby
+// 6. wylosowanie liczby z przedziału od 0 do wartości wskazanej przez usera;
+// 7. user klika w kwadrat i sprawdzamy czy wybrana liczba to liczba wylosowana
+// 8. sprawdzamy czy liczba wylowowana jest <> od liczby usera
+// 9. podajemy komunikat ze liczba user jest <> od liczby wylosowanej
+// 10. kolorujemy te które są <> od liczby;
+// 11. kiedy user trafi liczbę pokazać komunikat że to jest właściwa liczba
+// 12. podpowiedz
+// 13. licznik kliknięć
+// 14. wartość usera nie może być ujemna i mniejsza od 0 i większa od 500;
+// 16. instrukcja/ How to play
 // 17. po wskazaniu poprawnej liczby, zatrzymanie licznika i usunięcie nasłuchowania na checkNumber
+// 18. dodanie przycisku do ponownej gry
+// 19. dodanie animacji na hint
