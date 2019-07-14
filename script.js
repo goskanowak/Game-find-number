@@ -62,8 +62,8 @@ function addBoxs() {
   userNumberSquare = document.getElementById('userNumberSquare').value;
   document.querySelector('.squares').textContent = userNumberSquare;
   userNumberSquare = parseInt(userNumberSquare);
-  if (userNumberSquare <= 0 || userNumberSquare >= 500) {
-    message.textContent = " The number of squares must be between 0 and 500";
+  if (userNumberSquare <= 1 || userNumberSquare >= 501) {
+    message.textContent = " The number of squares must be between 2 and 500";
   } else {
     for (let i = 0; i < userNumberSquare; i++) {
       let box = document.createElement('div');
@@ -102,6 +102,7 @@ function checkNumber(e) {
     menuSquares.removeEventListener('click', checkNumber);
     playAgain.classList.add('active');
     document.querySelector('.fas').classList.add('animBig', 'visible');
+    messageRandom.classList.add('win');
   } else if (checkNumberUser <= randomNumber) {
     messageRandom.textContent = 'Your number is smaller than random number';
     for (i = 0; i < checkNumberUser; i++) {

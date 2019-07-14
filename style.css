@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+body {
+  position: relative;
+}
+
 *>button {
   border: none;
 }
@@ -89,7 +93,7 @@
 }
 
 .hint {
-  position: fixed;
+  position: absolute;
   height: 40px;
   width: 40px;
   top: 0;
@@ -167,7 +171,7 @@
 .fa-trophy {
   position: fixed;
   z-index: 1;
-  top: 20vh;
+  top: 16%;
   left: 5%;
   transform: rotate(-20deg);
   transition: 1s;
@@ -180,7 +184,6 @@
 
 .userNumber,
 .add {
-  /* display: none; */
   width: 30%;
   line-height: 200%;
   font-size: 1.3em;
@@ -240,6 +243,18 @@
 
 .visible {
   opacity: 1;
+}
+
+.win {
+  position: fixed;
+  left: 0;
+}
+
+.playAgain {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .random,
